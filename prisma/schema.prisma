@@ -11,11 +11,11 @@ datasource db {
 }
 
 model youtube_channels {
-  id Int @id @default(autoincrement())
-  name String @db.VarChar(255) @unique
+  id          Int      @id @default(autoincrement())
+  name        String   @unique @db.VarChar(255)
   description String?
-  link String?
-  subscribers Int @default(0)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  link        String?
+  subscribers Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
